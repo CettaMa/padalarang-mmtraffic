@@ -1,0 +1,95 @@
+{
+    "cctv_id": "padalarang_-_gedong_5_bawah",
+    "rois": [
+        {
+            "points": [
+                [
+                    678,
+                    525
+                ],
+                [
+                    1077,
+                    567
+                ],
+                [
+                    1096,
+                    476
+                ],
+                [
+                    751,
+                    446
+                ]
+            ],
+            "length_meters": 4.0,
+            "width_meters": 6.5,
+            "perspective": "depan",
+            "queue_zone": {
+                "points": [
+                    [
+                        623,
+                        573
+                    ],
+                    [
+                        1061,
+                        623
+                    ],
+                    [
+                        1101,
+                        443
+                    ],
+                    [
+                        789,
+                        410
+                    ]
+                ],
+                "length_meters": 8.0,
+                "width_meters": 6.5
+            }
+        },
+        {
+            "points": [
+                [
+                    603,
+                    592
+                ],
+                [
+                    297,
+                    567
+                ],
+                [
+                    379,
+                    513
+                ],
+                [
+                    666,
+                    532
+                ]
+            ],
+            "length_meters": 4.0,
+            "width_meters": 6.5,
+            "perspective": "belakang",
+            "queue_zone": {
+                "points": [
+                    [
+                        565,
+                        395
+                    ],
+                    [
+                        776,
+                        416
+                    ],
+                    [
+                        640,
+                        558
+                    ],
+                    [
+                        354,
+                        530
+                    ]
+                ],
+                "length_meters": 9.0,
+                "width_meters": 6.5
+            }
+        }
+    ]
+}

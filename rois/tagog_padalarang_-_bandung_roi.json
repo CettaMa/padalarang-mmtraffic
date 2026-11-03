@@ -1,0 +1,95 @@
+{
+    "cctv_id": "tagog_padalarang_-_bandung",
+    "rois": [
+        {
+            "points": [
+                [
+                    1159,
+                    430
+                ],
+                [
+                    1012,
+                    331
+                ],
+                [
+                    753,
+                    388
+                ],
+                [
+                    880,
+                    513
+                ]
+            ],
+            "length_meters": 6,
+            "width_meters": 6.5,
+            "perspective": "depan",
+            "queue_zone": {
+                "points": [
+                    [
+                        928,
+                        666
+                    ],
+                    [
+                        1242,
+                        512
+                    ],
+                    [
+                        743,
+                        150
+                    ],
+                    [
+                        544,
+                        168
+                    ]
+                ],
+                "length_meters": 35.7,
+                "width_meters": 7.6
+            }
+        },
+        {
+            "points": [
+                [
+                    244,
+                    278
+                ],
+                [
+                    552,
+                    271
+                ],
+                [
+                    540,
+                    219
+                ],
+                [
+                    285,
+                    225
+                ]
+            ],
+            "length_meters": 4.0,
+            "width_meters": 7.0,
+            "perspective": "belakang",
+            "queue_zone": {
+                "points": [
+                    [
+                        387,
+                        88
+                    ],
+                    [
+                        522,
+                        87
+                    ],
+                    [
+                        551,
+                        272
+                    ],
+                    [
+                        243,
+                        275
+                    ]
+                ],
+                "length_meters": 40.0,
+                "width_meters": 6.2
+            }
+        }
+    ]
+}

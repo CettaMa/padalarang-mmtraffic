@@ -1,0 +1,55 @@
+{
+  "_halo_source": "FHWA PSE arrival/departure windows; tunable defaults",
+  "region_radius_km": 40.0,
+  "local_radius_km": 5.0,
+  "corridor_radius_km": 2.0,
+  "roadwork_radius_km": 10.0,
+  "attendance_tiers": [
+    [20000, 3],
+    [5000, 2],
+    [1000, 1]
+  ],
+  "major_severity": 3,
+  "days_cap": 30.0,
+  "halo_hours": {
+    "concert": [4, 2],
+    "festival": [2, 2],
+    "sport": [4, 2],
+    "religious": [2, 2],
+    "community": [2, 1],
+    "expo": [2, 1],
+    "demonstration": [1, 1],
+    "roadwork": [0, 0],
+    "road_closure": [0, 0],
+    "mudik": [0, 0],
+    "school_holiday": [0, 0]
+  },
+  "venues": {
+    "Stadion Gelora Bandung Lautan Api": [-6.95756, 107.71205],
+    "Stadion Si Jalak Harupat": [-6.99648, 107.52973],
+    "Sasana Budaya Ganesha": [-6.88624, 107.60827],
+    "Stadion Siliwangi Bandung": [-6.91031, 107.61956],
+    "Lapangan Gasibu": [-6.90113, 107.61993],
+    "IKEA Kota Baru Parahyangan": [-6.86677, 107.46702],
+    "Stasiun Padalarang": [-6.84166, 107.49635],
+    "Gedung Merdeka Bandung": [-6.92101, 107.60923],
+    "Lapangan Saparua": [-6.90821, 107.61605]
+  },
+  "football_league_id": "4790",
+  "football_home_teams": [
+    "Persib Bandung"
+  ],
+  "football_match_hours": 2.0,
+  "news_queries": [
+    "konser Bandung",
+    "festival Bandung",
+    "Padalarang",
+    "\"Kota Baru Parahyangan\"",
+    "\"penutupan jalan\" Bandung",
+    "\"rekayasa lalu lintas\" Bandung",
+    "\"Bandung Barat\" acara",
+    "GBLA",
+    "\"Si Jalak Harupat\"",
+    "\"unjuk rasa\" Bandung"
+  ]
+}

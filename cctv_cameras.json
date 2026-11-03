@@ -1,0 +1,32 @@
+{
+  "padalarang_-_giant_-_tagog": {
+    "label": "Giant_Tagog",
+    "lat": -6.850234,
+    "lon": 107.495516
+  },
+  "padalarang_giant_-_tol": {
+    "label": "Giant_Tol",
+    "lat": -6.850234,
+    "lon": 107.495516
+  },
+  "padalarang_-_jl_baru_kbp": {
+    "label": "KBP_Baru",
+    "lat": -6.850900,
+    "lon": 107.496194
+  },
+  "padalarang_-_gedong_5_bawah": {
+    "label": "G_Bawah",
+    "lat": -6.847783,
+    "lon": 107.491782
+  },
+  "padalarang_-_gedong_5_atas_-_stasiun": {
+    "label": "G_Atas",
+    "lat": -6.842661,
+    "lon": 107.496385
+  },
+  "tagog_padalarang_-_bandung": {
+    "label": "Tagog_Padalarang",
+    "lat": -6.842804,
+    "lon": 107.484789
+  }
+}

@@ -1,0 +1,50 @@
+{
+    "cctv_id": "padalarang_giant_-_tol",
+    "rois": [
+        {
+            "points": [
+                [
+                    204,
+                    491
+                ],
+                [
+                    876,
+                    462
+                ],
+                [
+                    789,
+                    407
+                ],
+                [
+                    208,
+                    427
+                ]
+            ],
+            "length_meters": 4.3,
+            "width_meters": 12.2,
+            "perspective": "belakang",
+            "queue_zone": {
+                "points": [
+                    [
+                        217,
+                        313
+                    ],
+                    [
+                        604,
+                        301
+                    ],
+                    [
+                        874,
+                        459
+                    ],
+                    [
+                        204,
+                        489
+                    ]
+                ],
+                "length_meters": 28.0,
+                "width_meters": 12.2
+            }
+        }
+    ]
+}

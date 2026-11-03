@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<title>CCTV Monitor</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='9' fill='%23B7CECE'/></svg>" />
+<link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">CCTV<span class="brand-thin">Monitor</span></span>
+    <span class="chip chip-quiet">read-only</span>
+  </a>
+  <nav class="nav-links" aria-label="Bagian halaman">
+    <a href="#fleet">Kamera</a>
+    <a href="#coverage">Coverage</a>
+    <a href="#storage">Penyimpanan</a>
+    <a href="#incidents">Insiden</a>
+  </nav>
+  <div class="nav-actions">
+    <span class="live" id="live"><i class="live-dot"></i><span id="live-label">memuat</span></span>
+    <button class="btn" id="refresh" type="button">Refresh</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow"><span id="hero-clock">—</span> · perekaman berjalan 24/7</p>
+    <h1 class="hero-figure">
+      <span id="hero-uptime" class="figure-value">—</span><span class="figure-unit">%</span>
+    </h1>
+    <p class="hero-lede">
+      Uptime rata-rata <b>24 jam terakhir</b> dari <b id="hero-total">0</b> titik kamera.
+      Dihitung dari transisi status perekam dan dibatasi bukti segmen yang benar-benar masuk,
+      bukan dari ping sesaat.
+    </p>
+    <div class="hero-chips" id="hero-chips"></div>
+  </section>
+
+  <section class="kpis" id="kpis" aria-label="Ringkasan metrik"></section>
+
+  <section id="uptime-trend" class="section">
+    <div class="section-head">
+      <h2>Tren uptime</h2>
+      <p class="section-note">Rata-rata seluruh kamera, 24 jam terakhir.</p>
+    </div>
+    <div class="card" id="uptime-trend-body"></div>
+  </section>
+
+  <section id="fleet" class="section">
+    <div class="section-head">
+      <h2>Kamera</h2>
+      <p class="section-note">Diurutkan dari yang paling butuh perhatian. Klik kartu untuk detail.</p>
+    </div>
+    <div class="camera-grid" id="camera-grid"></div>
+  </section>
+
+  <section id="coverage" class="section">
+    <div class="section-head">
+      <h2>Coverage harian</h2>
+      <p class="section-note">
+        Porsi 24 jam yang benar-benar terekam, dihitung langsung dari jumlah segmen
+        <code>.ts</code> mentah per jam. Tanda <code>!</code> pada tanggal berarti paket 7z
+        harian untuk hari itu gagal.
+      </p>
+    </div>
+    <div class="card card-flush">
+      <div class="trend-strip-wrap" id="coverage-trend"></div>
+      <div class="heatmap-scroll"><div class="heatmap" id="heatmap"></div></div>
+      <div class="legend">
+        <span class="legend-label">0%</span>
+        <span class="legend-ramp" aria-hidden="true"></span>
+        <span class="legend-label">100%</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="storage" class="section split">
+    <div class="card">
+      <h3 class="card-title">Penyimpanan</h3>
+      <div id="disk"></div>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Arsip harian <span class="chip chip-quiet">7z store</span></h3>
+      <div class="scroll-y" id="archives"></div>
+    </div>
+  </section>
+
+  <section id="incidents" class="section">
+    <div class="section-head">
+      <h2>Insiden terbaru</h2>
+      <p class="section-note">Baris status non-online lintas kamera. Token URL sudah dimask.</p>
+    </div>
+    <div class="card card-flush">
+      <div class="scroll-y scroll-tall" id="incident-list"></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span class="mono">cctv-scraper monitor</span>
+    <span class="mono" id="foot-updated">—</span>
+  </footer>
+</main>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Detail kamera">
+  <div class="drawer-head">
+    <div>
+      <p class="eyebrow" id="drawer-eyebrow">Kamera</p>
+      <h2 id="drawer-title">—</h2>
+    </div>
+    <button class="btn btn-icon" id="drawer-close" type="button" aria-label="Tutup">&#215;</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

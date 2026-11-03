@@ -1,0 +1,7 @@
+# These scripts execute inside the Linux container. On a Windows checkout with
+# core.autocrlf=true they would arrive as CRLF, and because the Docker build
+# context copies the working tree verbatim the shebang becomes "bash\r":
+#   /usr/bin/env: 'bash\r': No such file or directory
+# Pinning them to LF keeps an image built on Windows identical to one built on
+# the recording server.
+*.sh text eol=lf

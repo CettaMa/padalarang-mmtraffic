@@ -1,0 +1,95 @@
+{
+    "cctv_id": "padalarang_-_gedong_5_atas_-_stasiun",
+    "rois": [
+        {
+            "points": [
+                [
+                    517,
+                    489
+                ],
+                [
+                    828,
+                    500
+                ],
+                [
+                    831,
+                    571
+                ],
+                [
+                    467,
+                    555
+                ]
+            ],
+            "length_meters": 2.0,
+            "width_meters": 5,
+            "perspective": "belakang",
+            "queue_zone": {
+                "points": [
+                    [
+                        743,
+                        266
+                    ],
+                    [
+                        861,
+                        281
+                    ],
+                    [
+                        831,
+                        497
+                    ],
+                    [
+                        518,
+                        482
+                    ]
+                ],
+                "length_meters": 15.5,
+                "width_meters": 4.0
+            }
+        },
+        {
+            "points": [
+                [
+                    863,
+                    604
+                ],
+                [
+                    1188,
+                    580
+                ],
+                [
+                    1089,
+                    471
+                ],
+                [
+                    848,
+                    478
+                ]
+            ],
+            "length_meters": 4.0,
+            "width_meters": 4.0,
+            "perspective": "depan",
+            "queue_zone": {
+                "points": [
+                    [
+                        850,
+                        511
+                    ],
+                    [
+                        1121,
+                        504
+                    ],
+                    [
+                        997,
+                        285
+                    ],
+                    [
+                        860,
+                        283
+                    ]
+                ],
+                "length_meters": 15.0,
+                "width_meters": 4.0
+            }
+        }
+    ]
+}

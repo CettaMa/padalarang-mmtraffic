@@ -1,0 +1,140 @@
+{
+    "cctv_id": "padalarang_-_giant_-_tagog",
+    "rois": [
+        {
+            "points": [
+                [
+                    263,
+                    383
+                ],
+                [
+                    470,
+                    354
+                ],
+                [
+                    436,
+                    486
+                ],
+                [
+                    84,
+                    523
+                ]
+            ],
+            "length_meters": 30.0,
+            "width_meters": 10.5,
+            "perspective": "depan",
+            "queue_zone": {
+                "points": [
+                    [
+                        88,
+                        523
+                    ],
+                    [
+                        439,
+                        488
+                    ],
+                    [
+                        471,
+                        354
+                    ],
+                    [
+                        265,
+                        381
+                    ]
+                ],
+                "length_meters": 30.0,
+                "width_meters": 10.85
+            }
+        },
+        {
+            "points": [
+                [
+                    563,
+                    580
+                ],
+                [
+                    810,
+                    621
+                ],
+                [
+                    857,
+                    547
+                ],
+                [
+                    636,
+                    512
+                ]
+            ],
+            "length_meters": 4.0,
+            "width_meters": 6.25,
+            "perspective": "depan",
+            "queue_zone": {
+                "points": [
+                    [
+                        741,
+                        453
+                    ],
+                    [
+                        861,
+                        435
+                    ],
+                    [
+                        706,
+                        327
+                    ],
+                    [
+                        650,
+                        334
+                    ]
+                ],
+                "length_meters": 30.0,
+                "width_meters": 4.0
+            }
+        },
+        {
+            "points": [
+                [
+                    845,
+                    436
+                ],
+                [
+                    1077,
+                    400
+                ],
+                [
+                    844,
+                    313
+                ],
+                [
+                    712,
+                    326
+                ]
+            ],
+            "length_meters": 30.0,
+            "width_meters": 7.0,
+            "perspective": "depan",
+            "queue_zone": {
+                "points": [
+                    [
+                        848,
+                        437
+                    ],
+                    [
+                        1075,
+                        400
+                    ],
+                    [
+                        843,
+                        312
+                    ],
+                    [
+                        714,
+                        327
+                    ]
+                ],
+                "length_meters": 30.0,
+                "width_meters": 7.0
+            }
+        }
+    ]
+}

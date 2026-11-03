@@ -1,0 +1,95 @@
+{
+    "cctv_id": "padalarang_-_jl_baru_kbp",
+    "rois": [
+        {
+            "points": [
+                [
+                    876,
+                    338
+                ],
+                [
+                    1166,
+                    354
+                ],
+                [
+                    1172,
+                    322
+                ],
+                [
+                    886,
+                    309
+                ]
+            ],
+            "length_meters": 4.0,
+            "width_meters": 6.45,
+            "perspective": "depan",
+            "queue_zone": {
+                "points": [
+                    [
+                        687,
+                        626
+                    ],
+                    [
+                        1110,
+                        648
+                    ],
+                    [
+                        1166,
+                        353
+                    ],
+                    [
+                        864,
+                        333
+                    ]
+                ],
+                "length_meters": 60.0,
+                "width_meters": 6.2
+            }
+        },
+        {
+            "points": [
+                [
+                    727,
+                    558
+                ],
+                [
+                    305,
+                    546
+                ],
+                [
+                    359,
+                    490
+                ],
+                [
+                    760,
+                    501
+                ]
+            ],
+            "length_meters": 4.0,
+            "width_meters": 6.0,
+            "perspective": "belakang",
+            "queue_zone": {
+                "points": [
+                    [
+                        554,
+                        312
+                    ],
+                    [
+                        858,
+                        334
+                    ],
+                    [
+                        687,
+                        623
+                    ],
+                    [
+                        235,
+                        605
+                    ]
+                ],
+                "length_meters": 60.0,
+                "width_meters": 6.2
+            }
+        }
+    ]
+}

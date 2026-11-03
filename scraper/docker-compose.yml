@@ -1,0 +1,71 @@
+services:
+  cctv-scraper:
+    build: .
+    image: cctv-scraper:latest
+    container_name: cctv-scraper
+    restart: unless-stopped
+    healthcheck:
+      # Health means recent VIDEO, not recent files. Scanning all of /app/dataset
+      # made this check pass on its own error logs and status CSVs, so a 12-hour
+      # outage with zero recordings still reported healthy. Only */videos/* counts.
+      # The 15m window sits above the app's own network watchdog (10m by default),
+      # so this stays the backstop for a process that is hung rather than offline.
+      test:
+        - CMD-SHELL
+        - >-
+          find /app/dataset -type f -path '*/videos/*' -mmin -15 -print -quit | grep -q . ||
+          (echo 'no recent video segments' >&2; kill -TERM 1; exit 1)
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 300s
+    extra_hosts:
+      - "atcs-dishubkbb.urbanaccess.net:103.151.226.229"
+    env_file:
+      - .env
+    environment:
+      CCTV_CONFIG_FILE: /app/cctv_points.csv
+      CCTV_OUTPUT_ROOT: /app/dataset
+      TZ: Asia/Jakarta
+    volumes:
+      - ./dataset:/app/dataset
+      - ./cctv_points.csv:/app/cctv_points.csv:ro
+
+  cctv-dashboard:
+    build: .
+    image: cctv-scraper:latest
+    container_name: cctv-dashboard
+    restart: unless-stopped
+    # Same image, different process. A dashboard crash restarts on its own and
+    # never touches the recorder, which must not be interrupted.
+    command: ["python3", "dashboard.py"]
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          python3 -c "import urllib.request as r; r.urlopen('http://127.0.0.1:8080/healthz',
+          timeout=5)"
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    env_file:
+      - .env
+    environment:
+      CCTV_CONFIG_FILE: /app/cctv_points.csv
+      CCTV_OUTPUT_ROOT: /app/dataset
+      TZ: Asia/Jakarta
+      # Bind inside the container; the host-side port is mapped below.
+      DASHBOARD_HOST: 0.0.0.0
+      DASHBOARD_PORT: "8080"
+      DASHBOARD_HISTORY_DB: /app/dashboard-data/history.db
+    ports:
+      - "${DASHBOARD_HOST_PORT:-8080}:8080"
+    volumes:
+      # Read-only: the dashboard can never damage a recording it is reporting on.
+      - ./dataset:/app/dataset:ro
+      - ./cctv_points.csv:/app/cctv_points.csv:ro
+      - dashboard-data:/app/dashboard-data
+
+volumes:
+  dashboard-data:
